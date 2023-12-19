@@ -201,12 +201,12 @@ def ghc_cc_program_args(hs, cc, ld):
     """
     args = [
         # GHC uses C compiler for assemly, linking and preprocessing as well.
-        "-pgma",
-        cc,
-        "-pgmc",
-        cc,
-        "-pgml",
-        cc,
+        #"-pgma",
+        #cc,
+        #"-pgmc",
+        #cc,
+        #"-pgml",
+        #cc,
         # Setting -pgm* flags explicitly has the unfortunate side effect
         # of resetting any program flags in the GHC settings file. So we
         # restore them here. See
@@ -218,8 +218,8 @@ def ghc_cc_program_args(hs, cc, ld):
         # argument to `-pgmP` which allows to pass these flags to `gcc` itself
         # as the preprocessor. See
         # https://gitlab.haskell.org/ghc/ghc/issues/17185#note_261599.
-        "-pgmP",
-        cc + " -E -undef -traditional",
+        #"-pgmP",
+        #cc + " -E -undef -traditional",
         "-optc-fno-stack-protector",
     ]
     if hs.toolchain.numeric_version >= [9, 4, 1]:
