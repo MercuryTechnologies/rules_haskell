@@ -129,8 +129,8 @@ def _compilation_defaults(
         ar_bindir = paths.dirname(cc.tools.ar)
 
         compile_flags += [
-            "-pgmotool=" + paths.join(ar_bindir, "otool"),
-            "-pgminstall_name_tool=" + paths.join(ar_bindir, "install_name_tool"),
+        #    "-pgmotool=" + paths.join(ar_bindir, "otool"),
+        #    "-pgminstall_name_tool=" + paths.join(ar_bindir, "install_name_tool"),
         ]
 
     package_ids = []
